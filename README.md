@@ -1,4 +1,7 @@
-# Skeleton template
+# Passport demo
+
+This might help you set up authentication. Special thanks to the example app found here:
+https://github.com/saintedlama/passport-local-mongoose
 
 ### Note
-You need to modify the package.json with **your** contact info, description, etc.
+You'll need to put your own mongo db connection info in the credentials.js file.

@@ -1,0 +1,27 @@
+{
+  "name": "skeleton",
+  "version": "1.0.0",
+  "description": "This is a simple app to get you started. Change the description as needed.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "live": "nodemon ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Your Name Here",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.7.12",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "pug": "~2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}

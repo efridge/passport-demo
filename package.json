@@ -1,5 +1,5 @@
 {
-  "name": "skeleton",
+  "name": "passport-demo",
   "version": "1.0.0",
   "description": "This is a simple app to get you started. Change the description as needed.",
   "main": "app.js",
@@ -8,20 +8,19 @@
     "live": "nodemon ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Your Name Here",
+  "author": "E.L. Fridge",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
-    "express": "^4.17.1",
-    "express-session": "^1.17.0",
-    "mongoose": "^5.7.12",
-    "passport": "^0.4.0",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.3.0",
+    "passport": "^0.5.2",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^5.0.1",
-    "pug": "~3.0.1"
+    "passport-local-mongoose": "^7.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.3"
+    "nodemon": "^2.0.15"
   }
 }

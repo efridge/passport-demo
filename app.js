@@ -8,9 +8,11 @@ const flash = require('connect-flash');
 
 var app = express();
 
-// view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "pug");
+// set up handlebars view engine
+let handlebars = require('express-handlebars')
+	.create({ defaultLayout:'main' });
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
 
 // Set port app will run on
 app.set("port", process.env.PORT || 3000);
@@ -21,8 +23,7 @@ app.use(session(creds.session));
 app.use( flash() );
 
 // Handle form submissions
-const bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 // Static file hosting
 app.use(express.static(path.join(__dirname, "public")));

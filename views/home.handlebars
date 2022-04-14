@@ -1,0 +1,11 @@
+{{#if message.length}}
+  <div class="alert alert-info">
+    {{message}}
+  </div>
+{{/if}}
+
+<h1>Welcome to My Website, {{user.username}}</h1>
+
+{{#if user.isAdmin}}
+    <p>You are an admin!</p>
+{{/if}}

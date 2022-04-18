@@ -58,7 +58,9 @@ app.get("/login", function(req, res) {
 });
 
 // Processes the login screen. Will redirect to the /login page again, along with a failure flash message
-app.post('/login', passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }), function(req, res) {
+app.post('/login', 
+passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }), 
+function(req, res) {
 
   // If they get this far they have authenticated so send them to the home page
   res.redirect('/');
@@ -83,9 +85,18 @@ app.post("/register", async function(req, res) {
 
 // The home page.  Notice the home-grown login middleware being used.
 app.get("/", mware.requireLogin, function(req, res) {
+
+  // Req.user is a mongoose object, we have to pull out the data we need
+  // for handlebars to use it. This could also be accomplished with a custom
+  // deserializeUser method above.
+  const simplifiedUser = {
+    username: req.user._doc.username, 
+    isAdmin: req.user._doc.isAdmin
+  };
+
   res.render("home", {
     message: req.flash('info'),
-    user: req.user
+    user: simplifiedUser
   });
 });
 

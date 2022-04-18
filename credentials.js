@@ -1,10 +1,10 @@
 module.exports = {
     mongo: {
         development: {
-            connectionString: 'changeme'
+            connectionString: 'mongodb://localhost:27017/passport-demo?retryWrites=true&w=majority'
         },
         production: {
-            connectionString: 'changeme'
+            connectionString: 'mongodb://localhost:27017/passport-demo?retryWrites=true&w=majority'
         }
     },
     session: {

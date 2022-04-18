@@ -4,4 +4,4 @@ This might help you set up authentication. Special thanks to the example app fou
 https://github.com/saintedlama/passport-local-mongoose
 
 ### Note
-You'll need to put your own mongo db connection info in the credentials.js file.
+The credentials file defaults to localhost. You'll want to change this if you database is hosted elsewhere or requires credentials.
